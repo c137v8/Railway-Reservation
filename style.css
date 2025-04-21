@@ -9,28 +9,31 @@ body {
 
 /* Header styles */
 header {
-    background-color: #0078d7;
+    background-color: #031852; 
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 1rem 2rem;
 }
 
-/* Navigation styles */
-nav {
-    background-color: #005a9e;
-    padding: 10px;
-    text-align: center;
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    
 }
 
-nav a {
+
+.nav-links li a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    
 }
 
 /* Main content styles */
@@ -55,7 +58,9 @@ footer {
     padding: 10px;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100%;    
+    margin-top: 3rem;
+      
 }
 
 /* Button styles */

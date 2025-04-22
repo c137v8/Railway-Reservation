@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Railway Reservation</title>
+    <title>Book Ticket - Railway Reservation</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <h1>Railway Reservation System</h1>
+            <h1>Book Your Train Ticket</h1>
             <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="book_ticket.html">Book Ticket</a></li>
@@ -23,10 +22,45 @@
 
     <main class="container">
         <section>
-            <h2>Welcome</h2>
-            <p>
-                Ticket book
-            </p>
+            <h2>Ticket Booking Form</h2>
+            <form action="submit_booking.php" method="post">
+                <div>
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <br>
+                <div>
+                    <label for="source">From (Station):</label><br>
+                    <input type="text" id="source" name="source" required />
+                </div>
+                <br>
+                <div>
+                    <label for="destination">To (Station):</label><br>
+                    <input type="text" id="destination" name="destination" required />
+                </div>
+                <br>
+                <div>
+                    <label for="date">Date of Journey:</label><br>
+                    <input type="date" id="date" name="journey_date" required />
+                </div>
+                <br>
+                <div>
+                    <label for="class">Class:</label><br>
+                    <select id="class" name="travel_class" required>
+                        <option value="SL">Sleeper (SL)</option>
+                        <option value="3A">AC 3 Tier (3A)</option>
+                        <option value="2A">AC 2 Tier (2A)</option>
+                        <option value="1A">First AC (1A)</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="seats">Number of Seats:</label><br>
+                    <input type="number" id="seats" name="seats" min="1" max="6" required />
+                </div>
+                <br>
+                <button type="submit">Book Ticket</button>
+            </form>
         </section>
     </main>
 

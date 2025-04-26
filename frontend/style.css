@@ -1,30 +1,33 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY AND LAYOUT */
 body, html {
     height: 100%;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
     display: flex;
     flex-direction: column;
 }
 
+/* CONTAINER */
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-
+/* HEADER */
 header {
-    background-color: #031852;
-    color: white;
-    padding: 1.5rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(90deg, #0a0f1c, #1f2937);
+    color: #58a6ff;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .header-content {
@@ -34,11 +37,14 @@ header {
 }
 
 header h1 {
+    font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-
+/* NAVIGATION */
 .nav-links {
     list-style: none;
     display: flex;
@@ -48,43 +54,73 @@ header h1 {
 }
 
 .nav-links a {
-    color: white;
+    color: #58a6ff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    color: #aad4ff;
+    color: #1f6feb;
     text-decoration: underline;
 }
 
-
+/* MAIN */
 main {
     flex: 1;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 section {
-    background-color: #fff;
-    padding: 2rem;
+    background-color: #161b22;
+    padding: 2.5rem;
     margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    text-align: center;
 }
 
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* BUTTONS */
+.cta-buttons .btn {
+    background: #238636;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-buttons .btn:hover {
+    background: #2ea043;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
 footer {
-    background-color: #222;
-    color: #ccc;
+    background-color: #010409;
+    color: #8b949e;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #aad4ff;
+    color: #58a6ff;
     text-decoration: none;
 }
 
@@ -92,24 +128,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
-button {
-    background-color: #0078d7;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-button:hover {
-    background-color: #005a9e;
-    transform: translateY(-2px);
-}
-
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
@@ -117,6 +136,6 @@ button:hover {
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 }

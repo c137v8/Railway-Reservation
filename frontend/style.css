@@ -139,3 +139,59 @@ footer a:hover {
         font-size: 1.75rem;
     }
 }
+/* FORM STYLES */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #58a6ff;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #58a6ff;
+    outline: none;
+}
+
+.btn {
+    background: #238636;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    border: none;
+    align-self: center;
+}
+
+.btn:hover {
+    background: #2ea043;
+    transform: translateY(-3px);
+}
+

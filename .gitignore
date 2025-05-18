@@ -1,9 +1,6 @@
-backend/node_modules/
-node_modules/
-.vscode/
-.env
 # Node.js dependencies
 node_modules/
+backend/node_modules/
 
 # VSCode settings
 .vscode/
@@ -31,3 +28,21 @@ coverage/
 dist/
 build/
 out/
+
+# Editor & system files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# PM2
+.pids/
+*.pid
+*.seed
+
+# TypeScript
+*.tsbuildinfo
+
+# Package manager stores
+.pnpm-store/
+.bun/

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Ticket - Railway Reservation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1><i class="fas fa-ticket-alt" aria-hidden="true"></i> Book Your Train Ticket</h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="book_ticket.html">Book Ticket</a></li>
+                    <li><a href="check_pnr.html">Check PNR Status</a></li>
+                    <li><a href="train_schedule.html">Train Schedule</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Ticket Booking Form</h2>
+            <form action="#" method="post" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="source">From (Station):</label>
+                    <select id="source" name="source" required>
+                        <option value="">Select Source</option>
+                        <option value="Jammu">Jammu</option>
+                        <option value="Srinagar">Srinagar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">To (Station):</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Select Destination</option>
+                        <option value="Jammu">Jammu</option>
+                        <option value="Srinagar">Srinagar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date of Journey:</label>
+                    <input type="date" id="date" name="journey_date" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <select id="class" name="travel_class" required>
+                        <option value="">Select Class</option>
+                        <option value="SL">Sleeper (SL)</option>
+                        <option value="3A">AC 3 Tier (3A)</option>
+                        <option value="2A">AC 2 Tier (2A)</option>
+                        <option value="1A">First AC (1A)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="seats">Number of Seats:</label>
+                    <input type="number" id="seats" name="seats" min="1" max="6" required />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Book Ticket</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Railway Reservation System. All rights reserved.</p>
+            <p>Contact: <a href="mailto:mohdirfan68883@gmail.com">mohdirfan68883@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

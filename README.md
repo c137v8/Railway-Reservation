@@ -19,7 +19,7 @@ A basic frontend project developed as part of the **Internet and Web Technology*
 Open `index.html` in any web browser.
 
 🔗 Live Demo:  
-[https://c137v8.github.io/Railway-Reservation/public/](https://c137v8.github.io/Railway-Reservation//)
+[Railmate](https://c137v8.github.io/Railway-Reservation/public/)
 
 ## Course Info
 

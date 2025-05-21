@@ -21,7 +21,7 @@ git clone https://github.com/c137v8/Railway-Reservation.git
 cd Railway-Reservation
 npm install
 ```
-**_NOTE:_**  This project has a static frontend. npm install and node app.js apply only if you plan to use a backend server (not shown in this repo).
+**_NOTE:_**  This project has a static frontend. npm install and node app.js apply only if you plan to use a backend server.
 
 # 🚀 Running the Project
 ### Frontend (Static)

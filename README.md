@@ -21,7 +21,7 @@ git clone https://github.com/c137v8/Railway-Reservation.git
 cd Railway-Reservation
 npm install
 ```
-Note: This project has a static frontend. npm install and node app.js apply only if you plan to use a backend server (not shown in this repo).
+**_NOTE:_**  This project has a static frontend. npm install and node app.js apply only if you plan to use a backend server (not shown in this repo).
 
 # 🚀 Running the Project
 ### Frontend (Static)
@@ -35,8 +35,8 @@ If you're running a Node.js backend:
 node app.js
 ```
 Then visit: http://localhost:3000
+**_NOTE:_**  Make sure to set the DATABASE_URL environment variable to point to your PostgreSQL database instance.
 
-Note: Make sure to set the DATABASE_URL environment variable to point to your PostgreSQL database instance.
 # 🌐 Live Demo
 url<><>
 # 📚 Course Details

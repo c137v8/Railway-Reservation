@@ -1,22 +1,29 @@
-require('dotenv').config();
-const express   = require('express');
-const path      = require('path');
-//const connectDB = require('./db');
-//const bookings  = require('./routes/bookings');
+const express = require('express');
+const app = express();
+const pool = require('./config/db');
+const bodyParser = require('body-parser');
+const crypto = require('crypto');
+const path = require('path');
 
-const app  = express();
-const PORT = process.env.PORT || 5000;
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public'))); // make sure HTML/CSS are in 'public'
 
-// DB
-//connectDB();
+app.post('/book', async (req, res) => {
+    const { name, source, destination, journey_date, travel_class, seats } = req.body;
+    const pnr = crypto.randomBytes(4).toString('hex').toUpperCase();
 
-// Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+    try {
+        await pool.query(
+            `INSERT INTO tickets (name, source, destination, journey_date, travel_class, seats, pnr)
+             VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+            [name, source, destination, journey_date, travel_class, seats, pnr]
+        );
+        res.send(`Ticket booked successfully! Your PNR is ${pnr}`);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Booking failed");
+    }
+});
 
-// Routes
-//app.use('/', bookings);   // POST /book handled here
-
-// Start
-app.listen(PORT, () => console.log(`Server on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

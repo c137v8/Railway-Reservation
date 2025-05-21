@@ -9,8 +9,8 @@
 # 🛠 Technologies Used
 - HTML5
 - CSS3
-- Font Awesome
-- (Optional backend integration using Node.js and PostgreSQL)
+- Express.js
+- Node.js
 
 # 📦 Installation
 

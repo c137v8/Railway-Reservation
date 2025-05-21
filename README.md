@@ -1,6 +1,6 @@
-Railway Reservation System
+# Railway Reservation System
 
-# A basic frontend-based project developed as part of the Internet and Web Technology course at the National Institute of Technology.
+ A basic frontend-based project developed as part of the Internet and Web Technology course at the National Institute of Technology.
 ## 🚆 Features
 - Book railway tickets
 - Check PNR status
